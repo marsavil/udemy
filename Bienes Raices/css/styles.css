@@ -1,0 +1,194 @@
+html{
+  font-size: 62.5%;/*RESET para REMs - 62.5% = 10px  100% = 16px */
+  box-sizing: border-box;
+}
+*, *:before, *after {
+  box-sizing: inherit; /*este codigo junto con font-size de html permite que al agregar padding a un elemento, esto no altere el tamaño ya asignado para ese elemento*/
+}
+body {
+  font-family: 'Lato', sans-serif; /* fuente importada de google fonts en el index.html*/
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+
+/** Globales **/
+
+img {
+  max-width: 100%; /*esto hace que todas la imagenes se hagan responsivas*/
+}
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+h1{
+  font-size: 3.8rem;
+}
+h2 {
+  font-size: 3.4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2.6rem;
+}
+
+
+/** Utilidades **/
+
+.seccion {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.centrar-texto {
+  text-align: center;
+}
+.d-block {
+  display: block!important; /* esto hace que el elemento se ensanche ocupando todo el espacio disponible. Important hace que esta propiedad no se reescriba por código posterior*/
+}
+
+/** Botones **/
+
+.boton{
+  color:#ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  margin-top: 3rem;
+  display: inline-block; /* los enlaces al igual que las imagenes son display inline por defecto y, por tanto, para modificar su ancho hay que transformarlos en block o inline-block*/
+  text-align: center;
+
+}
+.boton-amarillo {
+  background-color: #e08709;
+}
+.boton-verde {
+  background-color: #71b100;
+}
+
+/** Header**/
+
+.site-header.inicio {
+  background: url(../img/header.jpg);
+  background-position: center center; /*posiciona la imagen desde el centro*/
+  background-size: cover; /*fuerza a que se tome el espacio disponible tanto en altura como en ancho, guardando las proporciones*/
+  height: 100vh;
+  min-height: 60rem;
+}
+.contenido-header {
+  height: 100%; /* para que tome el 100% del espacio disponible de su padre*/
+  display: flex; /* flex box solo afecta al primer nivel */
+  flex-direction: column;
+  justify-content: space-between; /* alinea verticalmente porque flex direction esta en column*/
+}
+.contenido-header h1 {
+  color: #ffffff;
+  padding-bottom: 2rem;
+  max-width: 60rem;
+}
+.barra {
+  display: flex;
+  justify-content: space-between; /* alinear horizontalmente porque el flex direction esta por default en row*/
+  align-items: center; /*alinea los elementos verticalmente*/
+  padding-top: 3rem;
+}
+
+
+/**Navegación**/
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem; /* = 18 px */
+  margin-right: 2rem;
+}
+.navbar a:last-of-type { /* last of type es un pseudo selector */
+  margin: 0;
+}
+.navbar a:hover {
+  color: #71b100
+}
+
+
+/** Íconos Nosotros **/
+
+.iconos-nosotros {
+  display: flex;
+}
+.icono {
+  flex-basis: calc(33.3%-1rem); /*En lugar de usar width, se usa flex-basis(disponible en display flex, que permite usar calc para hacer operaciones matemáticoas. Se pone el porcentaje pensando en el diseño responsive*/
+  text-align: center; /*no solo alinea texto. Tambien alinea la imagen*/
+}
+.icono h3 {
+  text-transform: uppercase;
+}
+
+
+/** Anuncios **/
+
+.contenedor-anuncios {
+  display: flex;
+  justify-content: space-between;
+}
+.anuncio {
+  flex-basis: calc(33.3% - 1rem) ;
+  /* border-style: solid;
+  border-color: #B5B5B5;
+  border-width: 1px; */
+  border: 1px solid #b5b5b5; /*con esta se reemplazan lo 3 anteriores*/
+  background-color: #f5f5f5;
+}
+.contenido-anuncio {
+  padding: 2rem;
+}
+.contenido-anuncio h3, .contenido-anuncio p {
+  margin: 0;
+}
+.precio {
+  color: #71b100;
+  font-weight: 700;
+}
+.iconos-caracteristicas {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.iconos-caracteristicas li {
+  /* flex: 1; */
+  display: flex;
+}
+.iconos-caracteristicas li img {
+  margin-right: 2rem;
+}
+.ver-todas {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/**Contacto Home **/
+
+.imagen-contacto {
+  background-image: url(../img/encuentra.jpg);
+  height: 40rem;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+
+}
+.contenido-contacto {
+  flex: 1; /*detecta la cantidad de elementos disponibles. Detecta la cantidad de espacio disponible y lo asigna igualitariamente a cada elemento*/
+  color: #ffffff;
+}
+
+.contenido-contacto p {
+  font-size: 1.8rem;
+}
