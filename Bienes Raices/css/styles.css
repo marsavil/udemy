@@ -50,6 +50,9 @@ h4 {
 .d-block {
   display: block!important; /* esto hace que el elemento se ensanche ocupando todo el espacio disponible. Important hace que esta propiedad no se reescriba por código posterior*/
 }
+.contenido-centrado {
+  max-width: 80rem;
+}
 
 /** Botones **/
 
@@ -167,7 +170,9 @@ h4 {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-evenly; 
+  flex: 1;
+  max-width: 50rem;
 
 }
 .iconos-caracteristicas li {
@@ -293,6 +298,7 @@ h4 {
 
 /** INTERNAS **/
 
+/*Nosotros*/
 .contenido-nosotros {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* es igual a poner 50% 50% . Repite 1fr (1 fracción)*/
@@ -303,4 +309,12 @@ h4 {
   font-size: 2rem;
   margin: 0;
   padding: 1rem 0 3rem 0;
+}
+
+/*Anuncio*/
+
+.resumen-propiedad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
